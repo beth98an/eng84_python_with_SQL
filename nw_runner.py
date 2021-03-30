@@ -1,13 +1,8 @@
-import pyodbc
+# a runner- main- imports - create object -execute
 
-# Let's establish the connection using PYODBC
-server = "18.135.103.95"
-database = "Northwind"
-username = "SA"
-password = "Passw0rd2018"
-connection = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};'
-                                  'SERVER='+server+';DATABASE='+database+';UID=' + username + ';PWD=' + password)
+from nw_products import NwProducts
 
-cursor = connection.cursor()
-cursor.execute("CREATE TABLE Beth_table")
-
+prod = NwProducts()
+print(prod.retrieve_all_data_from_products())
+print(prod.create_table())
+print(prod.stock())
