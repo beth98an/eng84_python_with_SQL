@@ -1,11 +1,3 @@
-# Python with SQL
-## establishing a connection with PYODBC
-## Apply CRUD
-## Making data persisten
-
-```
-
-
 # to establish connection between python and SQL we will use PYODBC
 import pyodbc
 
@@ -42,6 +34,3 @@ while True:
     if record is None:
         break
     print(record.UnitPrice)
-```
-
-## SQL Task
