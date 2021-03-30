@@ -12,8 +12,8 @@ import pyodbc
 # Let's establish the connection using PYODBC
 server = "18.135.103.95"
 database = "Northwind"
-username = "SA"
-password = "Passw0rd2018"
+username = "xx"
+password = "xxxxxxx"
 docker_Northwind = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};'
                                   'SERVER='+server+';DATABASE='+database+';UID=' + username + ';PWD=' + password)
 
@@ -43,5 +43,12 @@ while True:
         break
     print(record.UnitPrice)
 ```
+### Useful lnks to help debug PYODBC installation
+- For Windows
+https://docs.microsoft.com/en-gb/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver15
+
+- for linux
+https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/m/msodbcsql17/
+https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql17/
 
 ## SQL Task
